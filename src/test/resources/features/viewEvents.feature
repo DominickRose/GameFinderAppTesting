@@ -1,0 +1,1 @@
+Feature: Users can view events in several places throughout the site
