@@ -1,1 +1,1 @@
-Feature: Users can view events in several places throughout the site
+Feature: Users can view events in several places throughout the site, including past events

@@ -1,0 +1,1 @@
+Feature: Users can register for events

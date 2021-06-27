@@ -1,0 +1,1 @@
+Feature: Users can view registered player profiles

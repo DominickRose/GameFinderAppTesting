@@ -1,0 +1,1 @@
+Feature: Users can edit their profile information, change visibility status, and close their account

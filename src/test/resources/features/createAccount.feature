@@ -1,0 +1,1 @@
+Feature: Users can create their own Player account to register for events and keep track of events they've participated in

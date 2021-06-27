@@ -1,0 +1,1 @@
+Feature: Users can create and edit events for others to join
