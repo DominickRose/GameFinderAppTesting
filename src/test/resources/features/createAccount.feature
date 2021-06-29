@@ -13,4 +13,4 @@ Feature: Users can create their own Player account to register for events and ke
     When The User enters info into the Phone Number field
     When The User enters info into the Location field (zipcode)
     When The User presses the Register button
-    Then An alert notifies them that their account was made
+    Then The User is automatically logged in and redirected to the Dashboard
