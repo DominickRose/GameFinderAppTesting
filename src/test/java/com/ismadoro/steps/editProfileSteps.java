@@ -3,84 +3,91 @@ package com.ismadoro.steps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class createAccountSteps {
+public class editProfileSteps {
 
-    @When("The User presses the sandwich in the corner of the Nav bar")
-    public void the_User_presses_the_sandwich_in_the_corner_of_the_Nav_bar() {
+    @When("The User clicks on the Settings tab")
+    public void the_User_clicks_on_the_Settings_tab() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-    @Then("The Flyout window appears")
-    public void the_Flyout_window_appears() {
+    @Then("The Settings menu is displayed")
+    public void the_Settings_menu_is_displayed() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-    @When("The User presses the Sign Up button")
-    public void the_User_presses_the_Sign_Up_button() {
+    @When("The User clicks on the Close Account button")
+    public void the_User_clicks_on_the_Close_Account_button() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-    @Then("The User is redirected to the Register page")
-    public void the_User_is_redirected_to_the_Register_page() {
+    @When("The User clicks on the Confirm button")
+    public void the_User_clicks_on_the_Confirm_button() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-    @When("The User enters info into the Username field")
-    public void the_User_enters_info_into_the_Username_field() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @When("The User enters info into the Password field")
-    public void the_User_enters_info_into_the_Password_field() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @When("The User enters info into the Profile Name field")
-    public void the_User_enters_info_into_the_Profile_Name_field() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @When("The User enters info into the Email field")
-    public void the_User_enters_info_into_the_Email_field() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @When("The User enters info into the Phone Number field")
-    public void the_User_enters_info_into_the_Phone_Number_field() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @When("The User enters info into the Location field \\(zipcode)")
-    public void the_User_enters_info_into_the_Location_field_zipcode() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @When("The User presses the Register button")
-    public void the_User_presses_the_Register_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-    @Then("The User is automatically logged in and redirected to the Dashboard")
-    public void the_User_is_automatically_logged_in_and_redirected_to_the_Dashboard() {
+    @Then("They are redirected to the Dashboard")
+    public void they_are_redirected_to_the_Dashboard() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
+    @When("The User clicks on the Public button")
+    public void theUserClicksOnThePublicButton() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+        
+    }
 
-    @Then("An alert tells the User to fill in all blank fields")
-    public void anAlertTellsTheUserToFillInAllBlankFields() {
+    @Then("The User is notified that their visibility status was updated")
+    public void theUserIsNotifiedThatTheirVisibilityStatusWasUpdated() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @When("The User enters invalid information in one or more fields")
-    public void theUserEntersInvalidInformationInOneOrMoreFields() {
+    @When("The User clicks on the Private button")
+    public void theUserClicksOnThePrivateButton() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("An alert tells the User to verify their information and try again")
-    public void anAlertTellsTheUserToVerifyTheirInformationAndTryAgain() {
+    @When("The User clicks on the Cancel button")
+    public void theUserClicksOnTheCancelButton() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("The Close Account prompt should close")
+    public void theCloseAccountPromptShouldClose() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @When("The User enters information into the fields under the Update Profile Info section")
+    public void theUserEntersInformationIntoTheFieldsUnderTheUpdateProfileInfoSection() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @When("The User presses the Update Profile button")
+    public void theUserPressesTheUpdateProfileButton() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("The User is notified that their account was updated successfully")
+    public void theUserIsNotifiedThatTheirAccountWasUpdatedSuccessfully() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @When("The User enters invalid information into the fields under the Update Profile Info section")
+    public void theUserEntersInvalidInformationIntoTheFieldsUnderTheUpdateProfileInfoSection() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then("An alert tells the User to review their information and try again")
+    public void anAlertTellsTheUserToReviewTheirInformationAndTryAgain() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }

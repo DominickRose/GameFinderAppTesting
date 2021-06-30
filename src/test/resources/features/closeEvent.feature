@@ -1,1 +1,0 @@
-Feature: Users can close their own events prematurely

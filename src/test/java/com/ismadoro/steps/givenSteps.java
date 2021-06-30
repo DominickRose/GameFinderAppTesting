@@ -1,8 +1,6 @@
 package com.ismadoro.steps;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 
 public class givenSteps {
 
@@ -30,5 +28,34 @@ public class givenSteps {
         throw new io.cucumber.java.PendingException();
     }
 
+    @Given("The User is on the Event Details page")
+    public void the_User_is_on_the_Event_Details_page() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 
+    @Given("The User is logged in on a dummy account")
+    public void the_User_is_logged_in_on_a_dummy_account() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+
+    @Given("The User is on the Event Details page for an Event they created")
+    public void theUserIsOnTheEventDetailsPageForAnEventTheyCreated() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Given("The User is on the Fly-out menu")
+    public void theUserIsOnTheFlyOutMenu() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Given("The User is on the New Event page")
+    public void theUserIsOnTheNewEventPage() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
 }
