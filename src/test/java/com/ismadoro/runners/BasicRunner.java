@@ -1,9 +1,6 @@
 package com.ismadoro.runners;
 
-import com.ismadoro.pages.DashboardPage;
-import com.ismadoro.pages.NavbarPage;
-import com.ismadoro.pages.RegisterPage;
-import com.ismadoro.pages.ProfilePage;
+import com.ismadoro.pages.*;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -11,8 +8,6 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import com.ismadoro.pages.WikiHomePage;
 
 import java.io.File;
 
@@ -27,6 +22,7 @@ public class BasicRunner {
     public static RegisterPage registerPage = null;
     public static DashboardPage dashboardPage = null;
     public static ProfilePage profilePage = null;
+    public static SearchPage searchPage = null;
 
     @BeforeClass
     public static void setup() {
@@ -38,6 +34,7 @@ public class BasicRunner {
         registerPage = new RegisterPage(driver);
         dashboardPage = new DashboardPage(driver);
         profilePage = new ProfilePage(driver);
+        searchPage = new SearchPage(driver);
     }
 
     @AfterClass

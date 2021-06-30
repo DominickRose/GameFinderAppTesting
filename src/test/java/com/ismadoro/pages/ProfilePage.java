@@ -41,5 +41,8 @@ public class ProfilePage {
     @FindBy(id="delete-user-button")
     public WebElement deleteUserButton;
 
+    @FindBy(tagName = "h1")
+    public WebElement privateNotice;
+
 
 }

@@ -5,7 +5,7 @@ Feature: Users can log in to access their Player account
     When The User inputs a valid Username into the appropriate text box
     When The User inputs a valid password into the appropriate text box
     When The User presses the Login button
-    Then The User should be redirected to the Dashboard
+    Then The User should be redirected to the Profile Page
 
   Scenario: Logging in with an invalid Username or Password
     Given The User is on the Fly-out menu

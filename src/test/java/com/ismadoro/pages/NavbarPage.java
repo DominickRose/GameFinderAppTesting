@@ -47,5 +47,23 @@ public class NavbarPage {
     @FindBy(id = "my-events-button")
     public WebElement myEventsButton;
 
+    @FindBy(id = "navbar-search-query")
+    public WebElement navbarSearchQuery;
+
+    @FindBy(id="navbar-search-option")
+    public WebElement navbarSearchOption;
+
+    @FindBy(id="event-search-option")
+    public WebElement eventSearchOption;
+
+    @FindBy(id="player-search-option")
+    public WebElement playerSearchOption;
+
+    @FindBy(id="navbar-search")
+    public WebElement navbarSearch;
+
+    @FindBy(id="nav-profile-info")
+    public WebElement navProfileInfo;
+
 
 }

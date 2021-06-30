@@ -21,10 +21,10 @@ public class loginSteps {
         BasicRunner.navbarPage.loginButton.click();
     }
 
-    @Then("The User should be redirected to the Dashboard")
-    public void theUserShouldBeRedirectedToTheDashboard() throws InterruptedException {
+    @Then("The User should be redirected to the Profile Page")
+    public void theUserShouldBeRedirectedToTheProfilePage() throws InterruptedException {
         Thread.sleep(1000);
-        assert BasicRunner.driver.getTitle().equals("Ismadoro");
+        assert BasicRunner.driver.getTitle().equals("Your Profile");
         BasicRunner.navbarPage.dropDownMenu.click();
         assert BasicRunner.navbarPage.uCenterText.getText().equals("Ronald Dahl");
         BasicRunner.navbarPage.logoutButton.click();

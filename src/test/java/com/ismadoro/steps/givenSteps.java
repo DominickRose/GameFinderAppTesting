@@ -30,11 +30,10 @@ public class givenSteps {
 
     }
 
-    //!WARNING: Update this so that the driver clicks on the Profile Name instead of the My Events button when possible!
     @Given("The User is on the Profile page")
     public void the_User_is_on_the_Profile_page() throws InterruptedException {
         BasicRunner.navbarPage.dropDownMenu.click();
-        BasicRunner.navbarPage.myEventsButton.click();
+        BasicRunner.navbarPage.navProfileInfo.click();
         Thread.sleep(500);
     }
 
@@ -50,8 +49,8 @@ public class givenSteps {
         BasicRunner.navbarPage.banner.click();
         Thread.sleep(500);
         BasicRunner.navbarPage.dropDownMenu.click();
-        BasicRunner.navbarPage.usernameInput.sendKeys("dahlman26");
-        BasicRunner.navbarPage.passwordInput.sendKeys("floppygiant8");
+        BasicRunner.navbarPage.usernameInput.sendKeys("mrprivate");
+        BasicRunner.navbarPage.passwordInput.sendKeys("sus");
         BasicRunner.navbarPage.loginButton.click();
         Thread.sleep(500);
     }

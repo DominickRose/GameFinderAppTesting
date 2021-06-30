@@ -13,7 +13,7 @@ Feature: Users can search and view registered player profiles
 
   Scenario: Viewing a private profile
     Given The User is on the Dashboard
-    When The User types the name of a player in the search bar
+    When The User types the name of another player in the search bar
     When The User presses the Search button dropdown
     When The User presses the Players option
     When The User presses the Players button
