@@ -8,10 +8,13 @@ Feature: Users can create their own Player account to register for events and ke
     Then The User is redirected to the Register page
     When The User enters info into the Username field
     When The User enters info into the Password field
-    When The User enters info into the Profile Name field
+    When The User enters info into the First Name field
+    When The User enters info into the Last Name field
     When The User enters info into the Email field
     When The User enters info into the Phone Number field
-    When The User enters info into the Location field (zipcode)
+    When The User enters info into the City field
+    When The User enters info into the State field
+    When The User enters info into the Description field
     When The User presses the Register button
     Then The User is automatically logged in and redirected to the Dashboard
 
@@ -23,7 +26,8 @@ Feature: Users can create their own Player account to register for events and ke
     Then The User is redirected to the Register page
     When The User enters info into the Username field
     When The User enters info into the Password field
-    When The User enters info into the Profile Name field
+    When The User enters info into the First Name field
+    When The User enters info into the Last Name field
     When The User enters info into the Email field
     When The User enters info into the Phone Number field
     When The User presses the Register button

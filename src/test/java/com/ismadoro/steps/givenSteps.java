@@ -1,13 +1,14 @@
 package com.ismadoro.steps;
 
+import com.ismadoro.runners.BasicRunner;
 import io.cucumber.java.en.Given;
 
 public class givenSteps {
 
     @Given("The User is on the Dashboard")
     public void The_User_is_on_the_Dashboard() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.driver.get("http://localhost:63342/DomGameFinderApp/pages/home.html");
+        BasicRunner.navbarPage.banner.click();
     }
 
     @Given("The User is on the Search page with search results")

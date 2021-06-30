@@ -1,5 +1,8 @@
 package com.ismadoro.runners;
 
+import com.ismadoro.pages.DashboardPage;
+import com.ismadoro.pages.NavbarPage;
+import com.ismadoro.pages.RegisterPage;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -19,6 +22,9 @@ public class BasicRunner {
 
     public static WebDriver driver = null;
     public static WikiHomePage wikiHomePage = null;
+    public static NavbarPage navbarPage = null;
+    public static RegisterPage registerPage = null;
+    public static DashboardPage dashboardPage = null;
 
     @BeforeClass
     public static void setup() {
@@ -26,6 +32,9 @@ public class BasicRunner {
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
         driver = new ChromeDriver();
         wikiHomePage = new WikiHomePage(driver);
+        navbarPage = new NavbarPage(driver);
+        registerPage = new RegisterPage(driver);
+        dashboardPage = new DashboardPage(driver);
     }
 
     @AfterClass
