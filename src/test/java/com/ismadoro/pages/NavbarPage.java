@@ -26,5 +26,26 @@ public class NavbarPage {
     @FindBy(id = "logout-button")
     public WebElement logoutButton;
 
+    @FindBy(id = "username-input")
+    public WebElement usernameInput;
+
+    @FindBy(id = "password-input")
+    public WebElement passwordInput;
+
+    @FindBy(id = "login-button")
+    public WebElement loginButton;
+
+    @FindBy(className = "u-center-text")
+    public WebElement uCenterText;
+
+    @FindBy(id = "login-error")
+    public WebElement loginError;
+
+    @FindBy(id = "new-event-button")
+    public WebElement newEventButton;
+
+    @FindBy(id = "my-events-button")
+    public WebElement myEventsButton;
+
 
 }

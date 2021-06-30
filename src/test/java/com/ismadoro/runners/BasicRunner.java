@@ -3,6 +3,7 @@ package com.ismadoro.runners;
 import com.ismadoro.pages.DashboardPage;
 import com.ismadoro.pages.NavbarPage;
 import com.ismadoro.pages.RegisterPage;
+import com.ismadoro.pages.ProfilePage;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -25,6 +26,7 @@ public class BasicRunner {
     public static NavbarPage navbarPage = null;
     public static RegisterPage registerPage = null;
     public static DashboardPage dashboardPage = null;
+    public static ProfilePage profilePage = null;
 
     @BeforeClass
     public static void setup() {
@@ -35,6 +37,7 @@ public class BasicRunner {
         navbarPage = new NavbarPage(driver);
         registerPage = new RegisterPage(driver);
         dashboardPage = new DashboardPage(driver);
+        profilePage = new ProfilePage(driver);
     }
 
     @AfterClass

@@ -1,5 +1,6 @@
 package com.ismadoro.steps;
 
+import com.ismadoro.runners.BasicRunner;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -7,67 +8,54 @@ public class loginSteps {
 
     @When("The User inputs a valid Username into the appropriate text box")
     public void theUserInputsAValidUsernameIntoTheAppropriateTextBox() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.navbarPage.usernameInput.sendKeys("dahlman26");
     }
 
     @When("The User inputs a valid password into the appropriate text box")
     public void theUserInputsAValidPasswordIntoTheAppropriateTextBox() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.navbarPage.passwordInput.sendKeys("floppygiant8");
     }
 
     @When("The User presses the Login button")
     public void theUserPressesTheLoginButton() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.navbarPage.loginButton.click();
     }
 
     @Then("The User should be redirected to the Dashboard")
-    public void theUserShouldBeRedirectedToTheDashboard() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void theUserShouldBeRedirectedToTheDashboard() throws InterruptedException {
+        Thread.sleep(1000);
+        assert BasicRunner.driver.getTitle().equals("Ismadoro");
+        BasicRunner.navbarPage.dropDownMenu.click();
+        assert BasicRunner.navbarPage.uCenterText.getText().equals("Ronald Dahl");
+        BasicRunner.navbarPage.logoutButton.click();
     }
 
     @When("The User inputs an invalid Username into the appropriate text box")
     public void theUserInputsAnInvalidUsernameIntoTheAppropriateTextBox() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.navbarPage.usernameInput.sendKeys("dahlman2");
     }
 
     @When("The User inputs an invalid password into the appropriate text box")
     public void theUserInputsAnInvalidPasswordIntoTheAppropriateTextBox() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.navbarPage.passwordInput.sendKeys("floppygiant");
+
     }
 
     @Then("An alert notifies the User that their username or password is incorrect")
     public void anAlertNotifiesTheUserThatTheirUsernameOrPasswordIsIncorrect() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        String x = BasicRunner.navbarPage.loginError.getText();
+        assert x.equals("No user matches those login credentials");
     }
 
     @When("The User leaves the Password field empty")
     public void theUserLeavesThePasswordFieldEmpty() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
     }
 
-    @When("The User closes the Fly-out menu")
-    public void theUserClosesTheFlyOutMenu() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("An alert notifies the User that their username or password is empty")
+    public void anAlertNotifiesTheUserThatTheirUsernameOrPasswordIsEmpty() {
+        String x = BasicRunner.navbarPage.loginError.getText();
+        assert x.equals("Please fill out all fields");
     }
 
-    @Then("The Fly-out menu closes")
-    public void theFlyOutMenuCloses() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
 
-    @Then("The Password and Username fields should be empty")
-    public void thePasswordAndUsernameFieldsShouldBeEmpty() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
 }
