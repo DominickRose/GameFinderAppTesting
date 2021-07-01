@@ -38,9 +38,11 @@ public class givenSteps {
     }
 
     @Given("The User is on the Event Details page")
-    public void the_User_is_on_the_Event_Details_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_User_is_on_the_Event_Details_page() throws InterruptedException {
+        BasicRunner.navbarPage.navbarSearch.click();
+        Thread.sleep(500);
+        BasicRunner.searchPage.eventResultRow1.click();
+        Thread.sleep(500);
     }
 
     @Given("The User is logged in on a dummy account")

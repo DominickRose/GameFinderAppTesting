@@ -5,19 +5,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SearchPage {
+public class EventPage {
 
     private WebDriver driver;
 
-    public SearchPage(WebDriver driver){
+    public EventPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(id="player-result-row-1")
-    public WebElement playerResult1;
+    @FindBy(id="register-event-button")
+    public WebElement registerEventButton;
 
-    @FindBy(id="event-result-row-1")
-    public WebElement eventResultRow1;
+    @FindBy(id="register-info")
+    public WebElement registerInfo;
 
 }
