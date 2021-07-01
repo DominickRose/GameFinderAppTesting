@@ -44,5 +44,11 @@ public class ProfilePage {
     @FindBy(tagName = "h1")
     public WebElement privateNotice;
 
+    @FindBy(id="button-new-event")
+    public WebElement buttonNewEvent;
+
+    @FindBy(id="event-tab")
+    public WebElement eventTab;
+
 
 }

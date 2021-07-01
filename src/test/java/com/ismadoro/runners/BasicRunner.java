@@ -23,6 +23,7 @@ public class BasicRunner {
     public static DashboardPage dashboardPage = null;
     public static ProfilePage profilePage = null;
     public static SearchPage searchPage = null;
+    public static NewEventPage newEventPage = null;
 
     @BeforeClass
     public static void setup() {
@@ -35,6 +36,7 @@ public class BasicRunner {
         dashboardPage = new DashboardPage(driver);
         profilePage = new ProfilePage(driver);
         searchPage = new SearchPage(driver);
+        newEventPage = new NewEventPage(driver);
     }
 
     @AfterClass

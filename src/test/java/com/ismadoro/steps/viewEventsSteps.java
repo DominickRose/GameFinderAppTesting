@@ -1,5 +1,6 @@
 package com.ismadoro.steps;
 
+import com.ismadoro.runners.BasicRunner;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -18,13 +19,12 @@ public class viewEventsSteps {
 
     @When("The User clicks on the My Events tab")
     public void the_User_clicks_on_the_My_Events_tab() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.profilePage.eventTab.click();
     }
     @Then("The My Events tab comes into view")
-    public void the_My_Events_tab_comes_into_view() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_My_Events_tab_comes_into_view() throws InterruptedException {
+        Thread.sleep(500);
+        assert BasicRunner.profilePage.buttonNewEvent.isDisplayed();
     }
     @When("The User clicks on an event from either table")
     public void the_User_clicks_on_an_event_from_either_table() {
