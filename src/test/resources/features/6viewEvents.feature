@@ -18,12 +18,12 @@ Feature: Users can view events in several places throughout the site, including 
     When The User clicks on the My Events tab
     Then The My Events tab comes into view
     When The User clicks on an event from either table
-    Then The User should be on the Event Details page for that event
+    Then The User should be on the Event Details page for their event
 
 
   Scenario: Viewing an event from the Recent Events section of the Profile
     Given The User is logged in
     Given The User is on the Profile page
     When The User clicks on an event from the Recent Events tab
-    Then The User should be on the Event Details page for that event
+    Then The User should be on the Event Details page for their event
 

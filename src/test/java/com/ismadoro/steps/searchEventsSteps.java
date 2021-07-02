@@ -1,5 +1,6 @@
 package com.ismadoro.steps;
 
+import com.ismadoro.runners.BasicRunner;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -7,18 +8,18 @@ public class searchEventsSteps {
 
     @When("The User presses the Events option")
     public void the_User_presses_the_Events_option() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.navbarPage.eventSearchOption.click();
     }
     @When("The User presses the Events button")
     public void the_User_presses_the_Events_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.navbarPage.navbarSearch.click();
     }
     @Then("The Search page should appear with no results")
-    public void the_Search_page_should_appear_with_no_results() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_Search_page_should_appear_with_no_results() throws InterruptedException {
+        Thread.sleep(500);
+        assert BasicRunner.searchPage.numSearchResults.getText().equals("No Search results!");
+        BasicRunner.navbarPage.banner.click();
+        Thread.sleep(500);
     }
     @When("The User selects a state from the dropdown menu in the Refine Search panel")
     public void the_User_selects_a_state_from_the_dropdown_menu_in_the_Refine_Search_panel() {

@@ -20,4 +20,7 @@ public class SearchPage {
     @FindBy(id="event-result-row-1")
     public WebElement eventResultRow1;
 
+    @FindBy(id="num-search-results")
+    public WebElement numSearchResults;
+
 }
