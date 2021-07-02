@@ -62,6 +62,7 @@ public class createEventSteps {
 
     @Then("An alert tells the User to ensure all fields are filled in")
     public void anAlertTellsTheUserToEnsureAllFieldsAreFilledIn() throws InterruptedException {
+        Thread.sleep(500);
         String x = BasicRunner.newEventPage.newEventError.getText();
         assert x.equals("Make sure all fields are filled properly!");
         BasicRunner.navbarPage.dropDownMenu.click();

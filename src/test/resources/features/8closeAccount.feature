@@ -1,4 +1,4 @@
-Feature: Users can close their account
+Feature: Users can close their account when it is no longer needed
 
   Scenario: Close dummy account
     Given The User is logged in on a dummy account

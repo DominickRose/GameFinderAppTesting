@@ -1,74 +1,63 @@
 package com.ismadoro.steps;
 
+import com.ismadoro.runners.BasicRunner;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class editEventSteps {
 
     @When("The User presses the Edit button")
-    public void theUserPressesTheEditButton() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void theUserPressesTheEditButton() throws InterruptedException {
+        Thread.sleep(500);
+        BasicRunner.eventPage.updateEventButton.click();
     }
 
     @Then("They are redirected to the Update page for that Event")
-    public void theyAreRedirectedToTheUpdatePageForThatEvent() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void theyAreRedirectedToTheUpdatePageForThatEvent() throws InterruptedException {
+        Thread.sleep(1000);
+        assert BasicRunner.driver.getTitle().equals("Event Information");
 
     }
 
     @When("The User enters new information into the Event fields")
     public void theUserEntersNewInformationIntoTheEventFields() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        BasicRunner.newEventPage.inputState.sendKeys("ks");
     }
 
     @When("The User presses the Update Event button")
-    public void theUserPressesTheUpdateEventButton() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @Then("They receive an alert that the Event was updated")
-    public void theyReceiveAnAlertThatTheEventWasUpdated() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void theUserPressesTheUpdateEventButton() throws InterruptedException {
+       Thread.sleep(500);
+       BasicRunner.newEventPage.buttonSubmit.click();
+       Thread.sleep(1000);
     }
 
     @When("The User enters new information into the Event fields but leaves a field blank")
-    public void theUserEntersNewInformationIntoTheEventFieldsButLeavesAFieldBlank() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void theUserEntersNewInformationIntoTheEventFieldsButLeavesAFieldBlank() throws InterruptedException {
+        BasicRunner.newEventPage.inputCity.clear();
+        BasicRunner.newEventPage.inputName.clear();
+        BasicRunner.newEventPage.inputWhen.clear();
+        BasicRunner.newEventPage.inputWhen.sendKeys(" ");
+        BasicRunner.newEventPage.inputState.sendKeys("ks");
+        Thread.sleep(500);
     }
 
-    @Then("An alert tells the User to ensure all fields are filled out")
-    public void anAlertTellsTheUserToEnsureAllFieldsAreFilledOut() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("User types a different event name into the appropriate text box")
+    public void userTypesADifferentEventNameIntoTheAppropriateTextBox() {
+        BasicRunner.newEventPage.inputName.clear();
+        BasicRunner.newEventPage.inputName.sendKeys("AnotherTest");
     }
 
-    @When("The User enters invalid information into an Event field")
-    public void theUserEntersInvalidInformationIntoAnEventField() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("The User presses the Delete button")
+    public void theUserPressesTheDeleteButton() {
+        BasicRunner.eventPage.deleteEventButton.click();
     }
 
-    @Then("An alert tells the User to ensure all fields are correct")
-    public void anAlertTellsTheUserToEnsureAllFieldsAreCorrect() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @When("The User presses the Close button")
-    public void theUserPressesTheCloseButton() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @Then("The User is redirected to the Dashboard")
-    public void theUserIsRedirectedToTheDashboard() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("The User is redirected to the My Events tab of the Profile page")
+    public void theUserIsRedirectedToTheMyEventsTabOfTheProfilePage() throws InterruptedException {
+        Thread.sleep(500);
+        assert BasicRunner.profilePage.buttonNewEvent.isDisplayed();
+        BasicRunner.navbarPage.dropDownMenu.click();
+        BasicRunner.navbarPage.logoutButton.click();
+        Thread.sleep(500);
     }
 }

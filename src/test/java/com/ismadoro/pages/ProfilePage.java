@@ -50,5 +50,8 @@ public class ProfilePage {
     @FindBy(id="event-tab")
     public WebElement eventTab;
 
+    @FindBy(id="create-table-row-1")
+    public WebElement createTableRow1;
+
 
 }

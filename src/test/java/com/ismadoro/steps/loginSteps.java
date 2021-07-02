@@ -28,6 +28,7 @@ public class loginSteps {
         BasicRunner.navbarPage.dropDownMenu.click();
         assert BasicRunner.navbarPage.uCenterText.getText().equals("Ronald Dahl");
         BasicRunner.navbarPage.logoutButton.click();
+        Thread.sleep(500);
     }
 
     @When("The User inputs an invalid Username into the appropriate text box")

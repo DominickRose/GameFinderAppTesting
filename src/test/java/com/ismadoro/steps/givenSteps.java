@@ -59,9 +59,12 @@ public class givenSteps {
 
 
     @Given("The User is on the Event Details page for an Event they created")
-    public void theUserIsOnTheEventDetailsPageForAnEventTheyCreated() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void theUserIsOnTheEventDetailsPageForAnEventTheyCreated() throws InterruptedException {
+        BasicRunner.navbarPage.dropDownMenu.click();
+        BasicRunner.navbarPage.myEventsButton.click();
+        Thread.sleep(500);
+        BasicRunner.profilePage.createTableRow1.click();
+        Thread.sleep(1000);
     }
 
     @Given("The User is on the Fly-out menu")

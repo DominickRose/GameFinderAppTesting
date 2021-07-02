@@ -1,4 +1,4 @@
-Feature: Users can register for events
+Feature: Users can register for events to keep track of them from their Profile
 
   Scenario: Registering for an Event while logged in
     Given The User is logged in

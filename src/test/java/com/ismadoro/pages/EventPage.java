@@ -20,4 +20,10 @@ public class EventPage {
     @FindBy(id="register-info")
     public WebElement registerInfo;
 
+    @FindBy(id="update-event-button")
+    public WebElement updateEventButton;
+
+    @FindBy(id="delete-event-button")
+    public WebElement deleteEventButton;
+
 }
