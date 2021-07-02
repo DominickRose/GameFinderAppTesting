@@ -43,8 +43,9 @@ public class loginSteps {
     }
 
     @Then("An alert notifies the User that their username or password is incorrect")
-    public void anAlertNotifiesTheUserThatTheirUsernameOrPasswordIsIncorrect() {
+    public void anAlertNotifiesTheUserThatTheirUsernameOrPasswordIsIncorrect() throws InterruptedException {
         String x = BasicRunner.navbarPage.loginError.getText();
+        Thread.sleep(500);
         assert x.equals("No user matches those login credentials");
     }
 

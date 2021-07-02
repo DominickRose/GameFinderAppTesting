@@ -8,6 +8,7 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.File;
 
@@ -30,6 +31,11 @@ public class BasicRunner {
     public static void setup() {
         File file = new File("src/test/resources/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+
+        ChromeOptions co = new ChromeOptions();
+        co.addArguments("--start-fullscreen");
+
+        //Pass co in as an argument to driver to start Chrome maximized.
         driver = new ChromeDriver();
         wikiHomePage = new WikiHomePage(driver);
         navbarPage = new NavbarPage(driver);
@@ -39,6 +45,8 @@ public class BasicRunner {
         searchPage = new SearchPage(driver);
         newEventPage = new NewEventPage(driver);
         eventPage = new EventPage(driver);
+
+        driver.manage().window().maximize();
     }
 
     @AfterClass
