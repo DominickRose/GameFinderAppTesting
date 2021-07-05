@@ -9,9 +9,39 @@ Feature: Users can search for specific events and filter them based on certain c
     When The User selects a state from the dropdown menu in the Refine Search panel
     When The User presses the Filter Results button
     Then The search updates to only shown events from that state
-    When The User enters a city name in the City field
+
+
+  Scenario: Search for events by type
+    Given The User is on the Dashboard
+    When The User presses the Search button dropdown
+    When The User presses the Events option
+    When The User presses the Events button
+    Then The Search page should appear with no results
+    When The User selects a type from the dropdown menu in the Refine Search panel
     When The User presses the Filter Results button
-    Then The search updates to only show events from that city
+    Then The search updates to only shown events from that type
+
+
+  Scenario: Search for events by skill
+    Given The User is on the Dashboard
+    When The User presses the Search button dropdown
+    When The User presses the Events option
+    When The User presses the Events button
+    Then The Search page should appear with no results
+    When The User selects a skill from the dropdown menu in the Refine Search panel
+    When The User presses the Filter Results button
+    Then The search updates to only shown events from that skill
+
+
+  Scenario: Search for events by date
+    Given The User is on the Dashboard
+    When The User presses the Search button dropdown
+    When The User presses the Events option
+    When The User presses the Events button
+    Then The Search page should appear with no results
+    When The User selects a date from the dropdown menu in the Refine Search panel
+    When The User presses the Filter Results button
+    Then The search updates to only shown events before that date
 
 
   Scenario: Search events by name
@@ -28,4 +58,4 @@ Feature: Users can search for specific events and filter them based on certain c
       When The User presses the Search button dropdown
       When The User presses the Events option
       When The User presses the Events button
-      Then The Search page should appear with no results
+      Then The Search page should appear with no results and the test ends

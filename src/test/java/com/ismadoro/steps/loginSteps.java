@@ -23,7 +23,7 @@ public class loginSteps {
 
     @Then("The User should be redirected to the Profile Page")
     public void theUserShouldBeRedirectedToTheProfilePage() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         assert BasicRunner.driver.getTitle().equals("Your Profile");
         BasicRunner.navbarPage.dropDownMenu.click();
         assert BasicRunner.navbarPage.uCenterText.getText().equals("Ronald Dahl");
@@ -44,8 +44,8 @@ public class loginSteps {
 
     @Then("An alert notifies the User that their username or password is incorrect")
     public void anAlertNotifiesTheUserThatTheirUsernameOrPasswordIsIncorrect() throws InterruptedException {
+        Thread.sleep(1000);
         String x = BasicRunner.navbarPage.loginError.getText();
-        Thread.sleep(500);
         assert x.equals("No user matches those login credentials");
     }
 

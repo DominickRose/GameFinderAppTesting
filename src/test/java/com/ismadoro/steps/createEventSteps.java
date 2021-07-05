@@ -18,7 +18,7 @@ public class createEventSteps {
 
     @When("User types a valid event date into the appropriate text box")
     public void userTypesAValidEventDateIntoTheAppropriateTextBox() {
-        BasicRunner.newEventPage.inputWhen.sendKeys("11/12/3050:06:00 AM");
+        BasicRunner.newEventPage.inputWhen.sendKeys("11/12/2002:06:00 AM");
     }
 
     @When("User types a valid number of players into the appropriate text box")
@@ -53,7 +53,14 @@ public class createEventSteps {
 
     @Then("The User should be redirected to the Event Details page for that event")
     public void theUserShouldBeRedirectedToTheEventDetailsPageForThatEvent() throws InterruptedException {
+        Thread.sleep(2000);
+        BasicRunner.navbarPage.banner.click();
         Thread.sleep(500);
+        BasicRunner.navbarPage.dropDownMenu.click();
+        BasicRunner.navbarPage.myEventsButton.click();
+        Thread.sleep(2000);
+        BasicRunner.profilePage.createTableRow1.click();
+        Thread.sleep(1000);
         assert BasicRunner.driver.getTitle().equals("Event View");
         BasicRunner.navbarPage.dropDownMenu.click();
         BasicRunner.navbarPage.logoutButton.click();
@@ -91,7 +98,9 @@ public class createEventSteps {
     }
 
     @When("The User presses the New Event button")
-    public void theUserPressesTheNewEventButton() {
+    public void theUserPressesTheNewEventButton() throws InterruptedException {
+        //BasicRunner.action.sendkeys
+        Thread.sleep(500);
         BasicRunner.profilePage.buttonNewEvent.click();
     }
 

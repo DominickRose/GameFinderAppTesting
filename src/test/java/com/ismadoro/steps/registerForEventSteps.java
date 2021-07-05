@@ -13,7 +13,7 @@ public class registerForEventSteps {
 
     @Then("The User is notified that they have successfully joined the Event")
     public void theUserIsNotifiedThatTheyHaveSuccessfullyJoinedTheEvent() throws InterruptedException {
-        Thread.sleep(500);
+        Thread.sleep(2000);
         String x = BasicRunner.eventPage.registerInfo.getText();
         assert x.equals("Successfully registered!");
         BasicRunner.navbarPage.dropDownMenu.click();
@@ -23,7 +23,7 @@ public class registerForEventSteps {
 
     @Then("The Register button is disabled")
     public void theRegisterButtonIsDisabled() throws InterruptedException {
-        Thread.sleep(500);
+        Thread.sleep(2000);
         assert !BasicRunner.eventPage.registerEventButton.isEnabled();
         BasicRunner.navbarPage.banner.click();
     }

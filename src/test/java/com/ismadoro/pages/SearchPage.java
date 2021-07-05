@@ -23,4 +23,19 @@ public class SearchPage {
     @FindBy(id="num-search-results")
     public WebElement numSearchResults;
 
+    @FindBy(id="InputState")
+    public WebElement inputState;
+
+    @FindBy(id="filter-results-button")
+    public WebElement filterResultsButton;
+
+    @FindBy(id="InputType")
+    public WebElement inputType;
+
+    @FindBy(id="InputSkill")
+    public WebElement inputSkill;
+
+    @FindBy(id="InputWhen")
+    public WebElement inputWhen;
+
 }

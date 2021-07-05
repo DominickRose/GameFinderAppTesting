@@ -13,7 +13,7 @@ public class deleteAccountSteps {
 
     @Then("They are redirected to the Dashboard")
     public void they_are_redirected_to_the_Dashboard() throws InterruptedException {
-        Thread.sleep(500);
+        Thread.sleep(3000);
         assert BasicRunner.driver.getTitle().equals("Ismadoro");
     }
 }

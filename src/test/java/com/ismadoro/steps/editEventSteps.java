@@ -14,7 +14,7 @@ public class editEventSteps {
 
     @Then("They are redirected to the Update page for that Event")
     public void theyAreRedirectedToTheUpdatePageForThatEvent() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         assert BasicRunner.driver.getTitle().equals("Event Information");
 
     }
@@ -28,7 +28,7 @@ public class editEventSteps {
     public void theUserPressesTheUpdateEventButton() throws InterruptedException {
        Thread.sleep(500);
        BasicRunner.newEventPage.buttonSubmit.click();
-       Thread.sleep(1000);
+       Thread.sleep(2000);
     }
 
     @When("The User enters new information into the Event fields but leaves a field blank")
@@ -55,6 +55,9 @@ public class editEventSteps {
     @Then("The User is redirected to the My Events tab of the Profile page")
     public void theUserIsRedirectedToTheMyEventsTabOfTheProfilePage() throws InterruptedException {
         Thread.sleep(500);
+        BasicRunner.navbarPage.dropDownMenu.click();
+        BasicRunner.navbarPage.myEventsButton.click();
+        Thread.sleep(2000);
         assert BasicRunner.profilePage.buttonNewEvent.isDisplayed();
         BasicRunner.navbarPage.dropDownMenu.click();
         BasicRunner.navbarPage.logoutButton.click();

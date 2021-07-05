@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
 
@@ -26,6 +27,7 @@ public class BasicRunner {
     public static SearchPage searchPage = null;
     public static NewEventPage newEventPage = null;
     public static EventPage eventPage = null;
+    public static Object action;
 
     @BeforeClass
     public static void setup() {
@@ -37,13 +39,16 @@ public class BasicRunner {
 
         //Pass co in as an argument to driver to start Chrome maximized.
         driver = new ChromeDriver();
+
+        Actions action = new Actions (driver);
+
         wikiHomePage = new WikiHomePage(driver);
         navbarPage = new NavbarPage(driver);
         registerPage = new RegisterPage(driver);
         dashboardPage = new DashboardPage(driver);
         profilePage = new ProfilePage(driver);
         searchPage = new SearchPage(driver);
-        newEventPage = new NewEventPage(driver);
+        newEventPage = new NewEventPage(driver, action);
         eventPage = new EventPage(driver);
 
         driver.manage().window().maximize();

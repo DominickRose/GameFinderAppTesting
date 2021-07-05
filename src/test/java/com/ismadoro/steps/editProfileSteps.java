@@ -21,6 +21,7 @@ public class editProfileSteps {
     }
     @Then("The User is notified that their visibility status is public")
     public void theUserIsNotifiedThatTheirVisibilityStatusIsPublic() throws InterruptedException {
+        Thread.sleep(2000);
         String x = BasicRunner.profilePage.visibilityText.getText();
         assert x.equals("Your profile is visible");
         BasicRunner.navbarPage.dropDownMenu.click();
@@ -33,6 +34,7 @@ public class editProfileSteps {
     }
     @Then("The User is notified that their visibility status is private")
     public void theUserIsNotifiedThatTheirVisibilityStatusIsPrivate() throws InterruptedException {
+        Thread.sleep(2000);
         String x = BasicRunner.profilePage.visibilityText.getText();
         assert x.equals("Your profile is not visible");
         BasicRunner.navbarPage.dropDownMenu.click();
@@ -54,7 +56,7 @@ public class editProfileSteps {
     @Then("The User is notified that their account was updated successfully")
     public void theUserIsNotifiedThatTheirAccountWasUpdatedSuccessfully() throws InterruptedException {
         BasicRunner.profilePage.profileTab.click();
-        Thread.sleep(500);
+        Thread.sleep(1000);
         String x = BasicRunner.profilePage.cityStateText.getText();
         assert x.equals("Albuquerque, VA");
         BasicRunner.navbarPage.dropDownMenu.click();

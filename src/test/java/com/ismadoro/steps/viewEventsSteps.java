@@ -7,16 +7,17 @@ import io.cucumber.java.en.When;
 public class viewEventsSteps {
 
     @When("The User clicks on an event")
-    public void the_User_clicks_on_an_event() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void the_User_clicks_on_an_event() throws InterruptedException {
+        Thread.sleep(2000);
+        BasicRunner.searchPage.eventResultRow1.click();
+        Thread.sleep(500);
     }
     @Then("The User should be on the Event Details page for that event")
     public void the_User_should_be_on_the_Event_Details_page_for_that_event() throws InterruptedException {
         Thread.sleep(500);
         assert BasicRunner.driver.getTitle().equals("Event View");
         BasicRunner.navbarPage.banner.click();
-        Thread.sleep(500);
+        Thread.sleep(2000);
     }
 
     @When("The User clicks on the My Events tab")
@@ -31,15 +32,6 @@ public class viewEventsSteps {
     @When("The User clicks on an event from either table")
     public void the_User_clicks_on_an_event_from_either_table() {
         BasicRunner.profilePage.createTableRow1.click();
-    }
-
-
-    //!WARNING: This is a placeholder implementation and should be updated when possible!
-    @When("The User clicks on an event from the Recent Events tab")
-    public void the_User_clicks_on_an_event_from_the_Recent_Events_tab() throws InterruptedException {
-        BasicRunner.navbarPage.dropDownMenu.click();
-        BasicRunner.navbarPage.logoutButton.click();
-        Thread.sleep(500);
     }
 
     @Then("The User should be on the Event Details page for their event")
